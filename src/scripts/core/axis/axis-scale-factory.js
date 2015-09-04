@@ -17,6 +17,10 @@
                 return new _.nw.axes.TimeScale(data, options);
             }
 
+            if (options.xAxis.type === 'log') {
+                return new _.nw.axes.LogScale(data, options);
+            }
+
             if (!options.xAxis.categories && options.xAxis.type === 'linear') {
                 return new _.nw.axes.LinearScale(data, options);
             }
